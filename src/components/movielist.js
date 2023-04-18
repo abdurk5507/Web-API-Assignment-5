@@ -29,13 +29,14 @@ class MovieList extends Component {
     }
 
     render() {
+        /*
         const MovieListCarousel = ({movieList}) => {
             console.log(movieList) //Logging error
             console.log(typeof movieList) //checking type
             
             if (!Array.isArray(movieList)) {
                 return <div>Invalid movie list</div>;
-              }
+            }
 
             if (!movieList) {
                 return <div>Loading....</div>
@@ -64,6 +65,37 @@ class MovieList extends Component {
         return (
             <MovieListCarousel movieList={this.props.movies} />
         )
+        */
+        
+        const { movies } = this.props;
+        
+        if (!Array.isArray(movies)) {
+            return <div>Invalid movie list</div>;
+        }
+        
+        if (!movies.length) {
+            return <div>Loading....</div>
+        }
+        
+        return (
+            <Carousel onSelect={this.handleSelect}>
+            {movies.map((movie) =>
+                <Carousel.Item key={movie._id}>
+                <div>
+                    <LinkContainer to={'/movie/'+movie._id} onClick={()=>this.handleClick(movie)}>
+                    <Nav.Link><Image className="image" src={movie.imageUrl} thumbnail /></Nav.Link>
+                    </LinkContainer>
+                </div>
+                <Carousel.Caption>
+                    <h3>{movie.title}</h3>
+                    <BsStarFill glyph={'star'} /> {movie.avgRating} &nbsp;&nbsp; {movie.releaseDate}
+                </Carousel.Caption>
+                </Carousel.Item>
+            )}
+            </Carousel>
+        )
+        
+          
     }
 }
 
