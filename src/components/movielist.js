@@ -31,6 +31,11 @@ class MovieList extends Component {
     render() {
         const MovieListCarousel = ({movieList}) => {
             console.log(movieList) //Logging error
+            
+            if (!Array.isArray(movieList)) {
+                return <div>Invalid movie list</div>;
+              }
+
             if (!movieList) {
                 return <div>Loading....</div>
             }
