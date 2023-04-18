@@ -95,7 +95,9 @@ class MovieList extends Component {
             </Carousel>
         )
         
-          
+        return (
+            <MovieListCarousel movieList={this.props.movies} />
+        )  
     }
 }
 
