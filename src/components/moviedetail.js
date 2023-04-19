@@ -35,6 +35,7 @@ class MovieDetail extends Component {
                                 </p>)}
                         </ListGroupItem>
                         <ListGroupItem><h4><BsStarFill/> {this.props.selectedMovie.avgRating}</h4></ListGroupItem>
+                        <h3>Average Rating: {this.props.selectedMovie.avgRating}</h3>
                     </ListGroup>
                     <Card.Body>
                         {this.props.selectedMovie.reviews.map((review, i) =>
