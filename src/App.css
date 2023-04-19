@@ -38,6 +38,8 @@
   margin-left: 30%
 }
 
+/*You may need to add .image*/
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

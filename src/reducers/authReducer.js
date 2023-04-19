@@ -1,5 +1,5 @@
 import constants from '../constants/actionTypes'
-
+//Minor differences
 let initialState = {
     loggedIn: localStorage.getItem('token') ? true : false,
     username: localStorage.getItem('username') ? localStorage.getItem('username') : ''

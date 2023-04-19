@@ -3,7 +3,7 @@ import {Navbar, Nav} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 import {connect} from 'react-redux';
 import {logoutUser} from "../actions/authActions";
-
+//Some differences
 class MovieHeader extends Component {
     logout() {
         this.props.dispatch(logoutUser());

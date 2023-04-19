@@ -1,5 +1,5 @@
 import constants from '../constants/actionTypes'
-
+//Minor differences
 let initialState = {
       movies: [],
       selectedMovie: null

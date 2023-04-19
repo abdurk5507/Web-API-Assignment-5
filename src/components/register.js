@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import { submitRegister } from '../actions/authActions';
 import { connect } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
-
+//Minor differences
 class Register extends Component {
 
     constructor(props){

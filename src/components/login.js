@@ -1,3 +1,4 @@
+//Minor differeences below
 import React, { Component } from 'react';
 import { submitLogin } from '../actions/authActions';
 import { connect } from 'react-redux';
@@ -32,6 +33,7 @@ class Login extends Component {
         dispatch(submitLogin(this.state.details));
     }
 
+    //Minor differences are here
     render(){
         return (
             <Form className='form-horizontal'>
